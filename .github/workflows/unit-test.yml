@@ -1,0 +1,9 @@
+name: Run unit test
+on: [push]
+jobs:
+  run-unit-test:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: exec ./.github/scripts/test.sh
+
